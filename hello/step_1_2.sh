@@ -44,10 +44,6 @@ echo '
         },
         {
           "name" : "ZOOKEEPER_CLIENT"
-        },
-        {
-          "name" : "KAFKA_CLIENT"
-
         }
       ],
       "cardinality" : "1"
