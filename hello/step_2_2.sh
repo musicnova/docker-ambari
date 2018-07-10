@@ -2,6 +2,7 @@
 echo "export MYIP=127.0.0.1"
 # xhost +local:
 # Step 2. Register Blueprint with Ambari
+# https://community.hortonworks.com/questions/38357/enable-kerberos-via-ambari-blueprint.html
 echo '
 {
   "configurations" : [
