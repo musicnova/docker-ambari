@@ -90,4 +90,8 @@ curl -Lo .amb j.mp/docker-ambari && source .amb && amb-deploy-cluster
 
 ## Experiments
 
-https://cwiki.apache.org/confluence/display/AMBARI/Blueprints#Blueprints-Introduction
+[Blueprints](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints#Blueprints-Introduction).
+
+[Ambari-Shell](https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Shell)
+
+[HDP-documentation](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-installation/bk_ambari-installation.pdf)
