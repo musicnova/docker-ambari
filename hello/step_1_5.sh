@@ -1,54 +1,54 @@
 #!/bin/sh
 echo "export MYIP=127.0.0.1"
-# Step 5. Create cluster with Ambari
+# xhost +local:
+# Step 2. Register Blueprint with Ambari
 echo '
 {
-  "blueprint" : "blueprint-name",
-  "default_password" : "super-secret-password",
-  "provision_action" : "(INSTALL_AND_START | INSTALL_ONLY)"
-  "configurations" : [
+  "host_groups" : [
     {
-      "configuration-type" : {
-        "property-name" : "property-value"
-      }
-    }
-    ...
-  ],    
-  "host_groups" :[
-    {
-      "name" : "host-group-name", 
-      "configurations" : [
+      "name" : "host_group_1",     
+      "components" : [
         {
-          "configuration-type" : {
-            "property-name" : "property-value"
-          }
-        }
-      ],    
-      "hosts" : [         
-        {
-          "fqdn" : "host.domain.com"
+          "name" : "NAMENODE"
         },
         {
-          "fqdn" : "host2.domain.com"
+          "name" : "SECONDARY_NAMENODE"
+        },       
+        {
+          "name" : "DATANODE"
+        },
+        {
+          "name" : "HDFS_CLIENT"
+        },
+        {
+          "name" : "RESOURCEMANAGER"
+        },
+        {
+          "name" : "NODEMANAGER"
+        },
+        {
+          "name" : "YARN_CLIENT"
+        },
+        {
+          "name" : "HISTORYSERVER"
+        },
+        {
+          "name" : "MAPREDUCE2_CLIENT"
+        },
+        {
+          "name" : "ZOOKEEPER_SERVER"
+        },
+        {
+          "name" : "ZOOKEEPER_CLIENT"
         }
-        ...
-      ]
+      ],
+      "cardinality" : "1"
     }
-    ...
   ],
-  "credentials" : [
-      {
-        "alias" : "kdc.admin.credential",
-        "principal" : "{PRINCIPAL}",
-        "key" : "{KEY}",
-        "type" : "(TEMPORARY | PERSISTED)"
-      }
-  ],
-  "security" : {
-         "type" : "(NONE | KERBEROS)",
-         "kerberos_descriptor" : {
-             ...
-          }
+  "Blueprints" : {
+    "blueprint_name" : "myBlueprint",
+    "stack_name" : "HDP",
+    "stack_version" : "2.4"
   }
 }
-' | curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://$MYIP:8080/api/v1/clusters/myCluster
+' | curl -H "X-Requested-By: ambari" -X POST -d @- -u admin:admin http://$MYIP:8080/api/v1/clusters/myCluster
