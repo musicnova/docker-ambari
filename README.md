@@ -88,3 +88,6 @@ an Ambari cluster:
 curl -Lo .amb j.mp/docker-ambari && source .amb && amb-deploy-cluster
 ```
 
+## Experiments
+
+https://cwiki.apache.org/confluence/display/AMBARI/Blueprints#Blueprints-Introduction
