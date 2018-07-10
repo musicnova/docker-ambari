@@ -1,20 +1,9 @@
 #!/bin/sh
 (echo cd docker-ambari &&
 echo &&
-echo . ambari-functions or source ambari-functions &&
+echo 'A=$(docker ps -a | grep -v "_data" | awk '"'"'NR>1 {print $1}'"')" &&
 echo &&
-# Download the file and source it:
-# To start a 3 node cluster:
-# https://github.com/sequenceiq/docker-ambari
-echo amb-settings &&
+echo echo '$A'
 echo &&
-echo amb-start-cluster 3 &&
-echo &&
-echo amb-settings '|' grep AMBARI_SERVER_IP &&
-echo &&
-echo amb-shell &&
-echo &&
-echo wget 127.0.0.1:8080 &&
-echo &&
-echo admin/admin &&
+echo docker rm --force '$A'
 echo)
