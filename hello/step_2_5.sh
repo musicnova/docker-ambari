@@ -4,7 +4,7 @@ echo "export MYIP=127.0.0.1"
 # Step 5. Create Cluster with Ambari
 echo '
 {
-  "blueprint" : "mydefaults",
+  "blueprint" : "mydefaults2",
   "host_groups" :[
     {
       "name" : "host_group_1", 
@@ -19,4 +19,4 @@ echo '
     }
   ]
 }
-' | curl -H "X-Requested-By: ambari" -X POST -d @- -u admin:admin http://$MYIP:8080/api/v1/clusters/myCluster
+' | curl -H "X-Requested-By: ambari" -X POST -d @- -u admin:admin http://$MYIP:8080/api/v1/clusters/myCluster2
