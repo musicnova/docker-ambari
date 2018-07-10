@@ -44,13 +44,17 @@ echo '
         },
         {
           "name" : "ZOOKEEPER_CLIENT"
+        },
+        {
+          "name" : "KAFKA_CLIENT"
+
         }
       ],
       "cardinality" : "1"
     }
   ],
   "Blueprints" : {
-    "blueprint_name" : "myBlueprintName",
+    "blueprint_name" : "mydefaults",
     "stack_name" : "HDP",
     "stack_version" : "2.3"
   }

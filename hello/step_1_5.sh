@@ -4,7 +4,7 @@ echo "export MYIP=127.0.0.1"
 # Step 5. Create Cluster with Ambari
 echo '
 {
-  "blueprint" : "myBlueprintName",
+  "blueprint" : "mydefaults",
   "host_groups" :[
     {
       "name" : "host_group_1", 
