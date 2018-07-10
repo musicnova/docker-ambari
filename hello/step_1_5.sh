@@ -10,10 +10,10 @@ echo '
       "name" : "host_group_1", 
       "hosts" : [         
         {
-          "fqdn" : "amb1.service.consul"
+          "fqdn" : "'"$MYIP"'"
         },
         {
-          "fqdn" : "amb2.service.consul"
+          "fqdn" : "'"$MYIP"'"
         }
       ]
     }
