@@ -105,10 +105,14 @@ curl -Lo .amb j.mp/docker-ambari && source .amb && amb-deploy-cluster
 
 ## Experiments
 
+[Sudo-Docker](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user).
+
 [Blueprints](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints#Blueprints-Introduction).
 
-[Ambari-Shell](https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Shell)
+[Ambari-Shell](https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Shell).
 
-[HDP-documentation](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-installation/bk_ambari-installation.pdf)
+[HDP-documentation](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-installation/bk_ambari-installation.pdf).
 
-[HowTo](https://community.hortonworks.com/articles/47170/automate-hdp-installation-using-ambari-blueprints.html)
+[Kerberos-troubles](https://community.hortonworks.com/questions/38357/enable-kerberos-via-ambari-blueprint.html).
+
+[How-to](https://community.hortonworks.com/articles/47170/automate-hdp-installation-using-ambari-blueprints.html).
