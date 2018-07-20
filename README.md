@@ -119,7 +119,7 @@ curl -Lo .amb j.mp/docker-ambari && source .amb && amb-deploy-cluster
 
 ## Debug 1 x1
 
-## Debug 2 x9
+## Debug 2 x11
 
 ## Debug 3 x11
 starting an ambari cluster with: 11 nodes
@@ -148,6 +148,6 @@ true[DEBUG] docker run -d --privileged --name amb9 -h amb9.service.consul horton
 true[DEBUG] docker run -d --privileged --name amb10 -h amb10.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
 0d06f978f76d29101680c259c0909e8d079b70e7b5634a6ff78d33df4f3c2ebc
 
-## Debug 4 x10
+## Debug 4 x11
 
-## Debug 5 x10
+## Debug 5 x11
