@@ -116,3 +116,30 @@ curl -Lo .amb j.mp/docker-ambari && source .amb && amb-deploy-cluster
 [Kerberos-troubles](https://community.hortonworks.com/questions/38357/enable-kerberos-via-ambari-blueprint.html).
 
 [How-to](https://community.hortonworks.com/articles/47170/automate-hdp-installation-using-ambari-blueprints.html).
+
+## Debug
+starting an ambari cluster with: 11 nodes
+[DEBUG] docker run -d --name amb-consul -h amb-consul.service.consul sequenceiq/consul:v0.5.0-v6 -server -bootstrap
+10da30039cb5b8bbebeab25c9272a5ece68c74bf5849b45896d265081fb4e2ea
+[DEBUG] docker run -d --privileged --name amb-server -h amb-server.service.consul hortonworks/ambari-server:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+36af5e54351812a44b45b0387c060ec6e1c450bf8770c1c2a2ceaf6c86abb560
+truetrue[DEBUG] docker run -d --privileged --name amb1 -h amb1.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+8e1683f0dc9e99cd10a09a972be9281204e2901e2729efc89bd03c7326a62f63
+true[DEBUG] docker run -d --privileged --name amb2 -h amb2.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+03b5b655128a181150f0bec159160cfefb2ade0f687f2fbad166918db053ddb8
+true[DEBUG] docker run -d --privileged --name amb3 -h amb3.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+22901dae4ddbfb68a7cee051d57111be10cda3f6ffa7218dea0d38e64412054b
+true[DEBUG] docker run -d --privileged --name amb4 -h amb4.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+4a56e402a42c1a6823f66f1c3dadf1fc7b277faa009c6c106013711aa4ebb235
+true[DEBUG] docker run -d --privileged --name amb5 -h amb5.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+c8d5136ec0732736680fc3d50e054ab99ccb47d40772468d8ffd0924f819cf5d
+true[DEBUG] docker run -d --privileged --name amb6 -h amb6.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+9d900d829500c242b2b3a16132efcd3ee899e609c9fff9056789780b8d3d3f70
+true[DEBUG] docker run -d --privileged --name amb7 -h amb7.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+99c31514113c81163b14404c8c6d45b9fd6070eeda0456590f2938859c6f002d
+true[DEBUG] docker run -d --privileged --name amb8 -h amb8.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+854e0cb0b54d0de930e895da117a48faaeb439642ba8f1716348f92bbf274fea
+true[DEBUG] docker run -d --privileged --name amb9 -h amb9.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+32103a3c83fd65b2403ddc90915d1adecce27436cfe6c7cf504a0fed7c565686
+true[DEBUG] docker run -d --privileged --name amb10 -h amb10.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
+0d06f978f76d29101680c259c0909e8d079b70e7b5634a6ff78d33df4f3c2ebc
