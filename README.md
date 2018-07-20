@@ -117,7 +117,11 @@ curl -Lo .amb j.mp/docker-ambari && source .amb && amb-deploy-cluster
 
 [How-to](https://community.hortonworks.com/articles/47170/automate-hdp-installation-using-ambari-blueprints.html).
 
-## Debug
+## Debug 1 x1
+
+## Debug 2 x9
+
+## Debug 3 x11
 starting an ambari cluster with: 11 nodes
 [DEBUG] docker run -d --name amb-consul -h amb-consul.service.consul sequenceiq/consul:v0.5.0-v6 -server -bootstrap
 10da30039cb5b8bbebeab25c9272a5ece68c74bf5849b45896d265081fb4e2ea
@@ -143,3 +147,7 @@ true[DEBUG] docker run -d --privileged --name amb9 -h amb9.service.consul horton
 32103a3c83fd65b2403ddc90915d1adecce27436cfe6c7cf504a0fed7c565686
 true[DEBUG] docker run -d --privileged --name amb10 -h amb10.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
 0d06f978f76d29101680c259c0909e8d079b70e7b5634a6ff78d33df4f3c2ebc
+
+## Debug 4 x10
+
+## Debug 5 x10

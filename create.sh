@@ -12,7 +12,7 @@ if [ "$1" = "" ]; then echo amb-start-cluster 3; fi
 if [ "$1" = "1" ]; then echo amb-start-cluster 1; fi
 if [ "$1" = "2" ]; then echo amb-start-cluster 9; fi
 if [ "$1" = "3" ]; then echo amb-start-cluster 11; fi
-if [ "$1" = "4" ]; then echo amb-start-cluster 6; fi
+if [ "$1" = "4" ]; then echo amb-start-cluster 10; fi
 if [ "$1" = "5" ]; then echo amb-start-cluster 10; fi
 echo &&
 echo amb-settings '|' grep AMBARI_SERVER_IP &&
