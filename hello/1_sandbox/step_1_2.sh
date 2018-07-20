@@ -2,7 +2,7 @@
 echo "export MYIP=127.0.0.1"
 # xhost +local:
 # Step 2. Register Blueprint with Ambari
-cat 1_all/sandbox.json | curl -H "X-Requested-By: ambari" -X POST -d @- -u admin:admin http://$MYIP:8080/api/v1/blueprints/1_all_sandbox
+cat 1_all/sandbox.json | sed -e 's#"Blueprints" : {#"Blueprints" : {"blueprint_name" : "mydefaults_1_sandbox",#g' | curl -H "X-Requested-By: ambari" -X POST -d @- -u admin:admin http://$MYIP:8080/api/v1/blueprints/1_all_sandbox
 echo 'continue?'
 if [ -n "$DBG" ]; then read ANSWER; else exit 0; fi
 echo '
@@ -53,9 +53,9 @@ echo '
     }
   ],
   "Blueprints" : {
-    "blueprint_name" : "mydefaults",
+    "blueprint_name" : "mydefaults_1_sandbox",
     "stack_name" : "HDP",
     "stack_version" : "2.3"
   }
 }'
-cat 1_all/sandbox.json 
+cat 1_all/sandbox.json | sed -e 's#"Blueprints" : {#"Blueprints" : {"blueprint_name" : "mydefaults_1_sandbox",#g' 
