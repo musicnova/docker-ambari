@@ -117,9 +117,52 @@ curl -Lo .amb j.mp/docker-ambari && source .amb && amb-deploy-cluster
 
 [How-to](https://community.hortonworks.com/articles/47170/automate-hdp-installation-using-ambari-blueprints.html).
 
+
 ## Debug 1 x1
 
+
+Small HDP Cluster
+=================
+
+HDP Sandbox Equivalent - Very cheap blueprint to run something up in the cloud to play with our stuff
+
+HDP components includeing
+- Core: HDFS, YARN, Zookeeper
+- Data store: HBase
+- Processing: MRv2, Tez, Hive, Pig, Spark
+- Streaming: Kafka, Storm, Flume
+- Workflow: Oozie, Falcon
+- Others: Slider, Sqoop, Client
+
+All in one box.
+
 ## Debug 2 x11
+
+Small HDP Cluster
+=================
+
+Likely 8-10 nodes that represent a standard HDP cluster.
+
+HDP components includeing
+- Core: HDFS, YARN, Zookeeper
+- Data store: HBase
+- Processing: MRv2, Tez, Hive, Pig
+- Workflow: Oozie, Falcon
+- Others: Slider, Sqoop, Client
+
+# Masters
+Master node x 3.
+- Master1: Namenode, History Server, ZooKeeper1, Oozie Server, Falcon Server
+- Master2: ResourceManager, Hive Metastore, Hive Server2, ZooKeeper2, WebHCat Server
+- Master3: SecoundaryNamenode, HMaster, ZooKeeper3, App Timeline Server
+
+# Slaves
+Slave node x 6
+- DataNode, NodeManager, RegionServer
+
+# Edges
+Edge node x 1
+- Knox Gateway, Client, Ambari Metrics Collector
 
 ## Debug 3 x11
 starting an ambari cluster with: 11 nodes
@@ -148,49 +191,7 @@ true[DEBUG] docker run -d --privileged --name amb9 -h amb9.service.consul horton
 true[DEBUG] docker run -d --privileged --name amb10 -h amb10.service.consul hortonworks/ambari-agent:latest systemd.setenv=NAMESERVER_ADDR=172.17.0.2
 0d06f978f76d29101680c259c0909e8d079b70e7b5634a6ff78d33df4f3c2ebc
 
-## Debug 4 x11
 
-## Debug 5 x11
-Small HDP Cluster
-=================
-
-HDP Sandbox Equivalent - Very cheap blueprint to run something up in the cloud to play with our stuff
-
-HDP components includeing
-- Core: HDFS, YARN, Zookeeper
-- Data store: HBase
-- Processing: MRv2, Tez, Hive, Pig, Spark
-- Streaming: Kafka, Storm, Flume
-- Workflow: Oozie, Falcon
-- Others: Slider, Sqoop, Client
-
-All in one box.
-
-Small HDP Cluster
-=================
-
-Likely 8-10 nodes that represent a standard HDP cluster.
-
-HDP components includeing
-- Core: HDFS, YARN, Zookeeper
-- Data store: HBase
-- Processing: MRv2, Tez, Hive, Pig
-- Workflow: Oozie, Falcon
-- Others: Slider, Sqoop, Client
-
-# Masters
-Master node x 3.
-- Master1: Namenode, History Server, ZooKeeper1, Oozie Server, Falcon Server
-- Master2: ResourceManager, Hive Metastore, Hive Server2, ZooKeeper2, WebHCat Server
-- Master3: SecoundaryNamenode, HMaster, ZooKeeper3, App Timeline Server
-
-# Slaves
-Slave node x 6
-- DataNode, NodeManager, RegionServer
-
-# Edges
-Edge node x 1
-- Knox Gateway, Client, Ambari Metrics Collector
 
 HDP Cluster with HA (WIP)
 =========================
@@ -225,6 +226,8 @@ Edge node x 2
 - Knox Gateway, Client
 - Knox Gateway, Client
 
+## Debug 4 x11
+
 Streaming HDP Cluster
 =====================
 
@@ -255,6 +258,8 @@ Slave node x 3
 # Edges
 Edge node x 1
 - Knox Gateway, Client, Ambari Metrics Collector, Flume
+
+## Debug 5 x11
 
 HDP Cluster with Spark
 ======================
