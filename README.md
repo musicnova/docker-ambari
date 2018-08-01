@@ -226,7 +226,7 @@ Edge node x 2
 - Knox Gateway, Client
 - Knox Gateway, Client
 
-## Debug 4 x11
+## Debug 4 x11 (x5)
 
 Streaming HDP Cluster
 =====================
