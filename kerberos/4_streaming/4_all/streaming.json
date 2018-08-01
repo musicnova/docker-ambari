@@ -1529,7 +1529,7 @@
   ],
   "host_groups" : [
     {
-      "name" : "host_group_slave_1",
+      "name" : "host_group_slave_1_n_2",
       "configurations" : [ ],
       "components" : [
         {
@@ -1543,14 +1543,7 @@
         },
         {
           "name" : "DATANODE"
-        }
-      ],
-      "cardinality" : "3"
-    },
-    {
-      "name" : "host_group_slave_2",
-      "configurations" : [ ],
-      "components" : [
+ },
         {
           "name" : "KAFKA_BROKER"
         },
@@ -1561,10 +1554,10 @@
           "name" : "METRICS_MONITOR"
         }
       ],
-      "cardinality" : "3"
+      "cardinality" : "1"
     },
     {
-      "name" : "host_group_master_3",
+      "name" : "host_group_master_3_n_2_n_1",
       "configurations" : [ ],
       "components" : [
         {
@@ -1587,14 +1580,7 @@
         },
         {
           "name" : "DRPC_SERVER"
-        }
-      ],
-      "cardinality" : "1"
-    },
-    {
-      "name" : "host_group_master_2",
-      "configurations" : [ ],
-      "components" : [
+ },
         {
           "name" : "ZOOKEEPER_SERVER"
         },
@@ -1639,14 +1625,7 @@
         },
         {
           "name" : "WEBHCAT_SERVER"
-        }
-      ],
-      "cardinality" : "1"
-    },
-    {
-      "name" : "host_group_master_1",
-      "configurations" : [ ],
-      "components" : [
+ },
         {
           "name" : "ZOOKEEPER_SERVER"
         },
